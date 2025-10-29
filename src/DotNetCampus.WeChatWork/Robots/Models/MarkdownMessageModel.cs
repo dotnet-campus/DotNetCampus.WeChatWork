@@ -1,11 +1,15 @@
-﻿using System.Runtime.Serialization;
+﻿using System.Text.Json.Serialization;
 
-namespace DotNetCampus.WeChatWork.Robots.Models
+namespace DotNetCampus.WeChatWork.Robots.Models;
+
+/// <summary>
+/// Markdown 消息模型。
+/// </summary>
+internal record MarkdownMessageModel : RequestMessageModel
 {
-    [DataContract]
-    public class MarkdownMessageModel : RequestMessageModel
-    {
-        [DataMember(Name = "content")]
-        public string Content { get; set; }
-    }
+    /// <summary>
+    /// Markdown 消息内容。
+    /// </summary>
+    [JsonPropertyName("content")]
+    public string? Content { get; init; }
 }

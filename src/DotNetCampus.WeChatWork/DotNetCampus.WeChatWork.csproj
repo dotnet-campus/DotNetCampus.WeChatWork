@@ -1,21 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageOutputPath>..\..\bin\$(Configuration)</PackageOutputPath>
-    <Authors>dotnet-campus</Authors>
-    <Product>企业微信机器人开发 API</Product>
-    <Company>dotnet-campus</Company>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/dotnet-campus/DotNetCampus.WeChatWork</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/dotnet-campus/DotNetCampus.WeChatWork.git</RepositoryUrl>
-    <RepositoryType>git</RepositoryType>
-    <Version>0.1.0</Version>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <IsAotCompatible>true</IsAotCompatible>
   </PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
-  </ItemGroup>
-  
 </Project>

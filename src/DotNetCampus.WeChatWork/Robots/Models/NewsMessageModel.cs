@@ -1,41 +1,45 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Runtime.Serialization;
+﻿using System.Text.Json.Serialization;
 
-namespace DotNetCampus.WeChatWork.Robots.Models
+namespace DotNetCampus.WeChatWork.Robots.Models;
+
+/// <summary>
+/// 图文消息模型。
+/// </summary>
+internal record NewsMessageModel : RequestMessageModel
 {
-    [DataContract]
-    public class NewsMessageModel : RequestMessageModel
-    {
-        [DataMember(Name = "articles")]
-        public IList<NewsArticleModel> Articles { get; set; }
-    }
+    /// <summary>
+    /// 图文消息列表。
+    /// </summary>
+    [JsonPropertyName("articles")]
+    public IReadOnlyList<NewsArticleModel>? Articles { get; init; }
+}
 
-    [DataContract]
-    public class NewsArticleModel
-    {
-        public NewsArticleModel()
-        {
-        }
+/// <summary>
+/// 图文消息中的单个文章模型。
+/// </summary>
+internal class NewsArticleModel
+{
+    /// <summary>
+    /// 标题。
+    /// </summary>
+    [JsonPropertyName("title")]
+    public string? Title { get; init; }
 
-        public NewsArticleModel(string title, string description, string url, string pictureUrl)
-        {
-            Title = title ?? throw new ArgumentNullException(nameof(title));
-            Description = description ?? throw new ArgumentNullException(nameof(description));
-            Url = url ?? throw new ArgumentNullException(nameof(url));
-            PictureUrl = pictureUrl ?? throw new ArgumentNullException(nameof(pictureUrl));
-        }
+    /// <summary>
+    /// 描述。
+    /// </summary>
+    [JsonPropertyName("description")]
+    public string? Description { get; init; }
 
-        [DataMember(Name = "title")]
-        public string Title { get; set; }
+    /// <summary>
+    /// 点击后跳转的链接。
+    /// </summary>
+    [JsonPropertyName("url")]
+    public string? Url { get; init; }
 
-        [DataMember(Name = "description")]
-        public string Description { get; set; }
-
-        [DataMember(Name = "url")]
-        public string Url { get; set; }
-
-        [DataMember(Name = "picurl")]
-        public string PictureUrl { get; set; }
-    }
+    /// <summary>
+    /// 图片链接。
+    /// </summary>
+    [JsonPropertyName("picurl")]
+    public string? PictureUrl { get; init; }
 }

@@ -1,9 +1,6 @@
-﻿using System.Runtime.Serialization;
+﻿namespace DotNetCampus.WeChatWork.Robots.Models;
 
-namespace DotNetCampus.WeChatWork.Robots.Models
-{
-    [DataContract]
-    public abstract class RequestMessageModel
-    {
-    }
-}
+/// <summary>
+/// 请求消息的基类。
+/// </summary>
+internal abstract record RequestMessageModel;

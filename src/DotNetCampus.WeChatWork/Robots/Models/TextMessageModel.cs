@@ -1,18 +1,27 @@
-﻿using System.Collections.Generic;
-using System.Runtime.Serialization;
+﻿using System.Text.Json.Serialization;
 
-namespace DotNetCampus.WeChatWork.Robots.Models
+namespace DotNetCampus.WeChatWork.Robots.Models;
+
+/// <summary>
+/// 文本消息模型。
+/// </summary>
+internal record TextMessageModel : RequestMessageModel
 {
-    [DataContract]
-    public class TextMessageModel : RequestMessageModel
-    {
-        [DataMember(Name = "content")]
-        public string Content { get; set; }
+    /// <summary>
+    /// 文本消息内容。
+    /// </summary>
+    [JsonPropertyName("content")]
+    public string? Content { get; init; }
 
-        [DataMember(Name = "mentioned_list")]
-        public IList<string> MentionedList { get; set; }
+    /// <summary>
+    /// 被提及的成员列表。
+    /// </summary>
+    [JsonPropertyName("mentioned_list")]
+    public IReadOnlyList<string>? MentionedList { get; init; }
 
-        [DataMember(Name = "mentioned_mobile_list")]
-        public IList<string> MentionedMobileList { get; set; }
-    }
+    /// <summary>
+    /// 被提及的手机号列表。
+    /// </summary>
+    [JsonPropertyName("mentioned_mobile_list")]
+    public IReadOnlyList<string>? MentionedMobileList { get; init; }
 }
