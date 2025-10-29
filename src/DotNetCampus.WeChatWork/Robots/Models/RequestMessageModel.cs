@@ -1,6 +1,6 @@
 ﻿using System.Runtime.Serialization;
 
-namespace dotnetCampus.WeChatWork.Robots.Models
+namespace DotNetCampus.WeChatWork.Robots.Models
 {
     [DataContract]
     public abstract class RequestMessageModel

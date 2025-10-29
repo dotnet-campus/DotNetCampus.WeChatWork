@@ -8,8 +8,8 @@
     <Product>企业微信机器人开发 API</Product>
     <Company>dotnet-campus</Company>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/dotnet-campus/dotnetCampus.WeChatWork</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/dotnet-campus/dotnetCampus.WeChatWork.git</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/dotnet-campus/DotNetCampus.WeChatWork</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/dotnet-campus/DotNetCampus.WeChatWork.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <Version>0.1.0</Version>
   </PropertyGroup>

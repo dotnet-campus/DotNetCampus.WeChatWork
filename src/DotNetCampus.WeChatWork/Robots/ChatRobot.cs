@@ -1,4 +1,4 @@
-﻿using dotnetCampus.WeChatWork.Robots.Models;
+﻿using DotNetCampus.WeChatWork.Robots.Models;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -8,7 +8,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace dotnetCampus.WeChatWork.Robots
+namespace DotNetCampus.WeChatWork.Robots
 {
     /// <summary>
     /// 表示一个企业微信中的普通群聊机器人。

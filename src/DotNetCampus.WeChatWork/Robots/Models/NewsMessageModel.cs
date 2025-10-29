@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Runtime.Serialization;
 
-namespace dotnetCampus.WeChatWork.Robots.Models
+namespace DotNetCampus.WeChatWork.Robots.Models
 {
     [DataContract]
     public class NewsMessageModel : RequestMessageModel
