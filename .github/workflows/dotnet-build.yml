@@ -1,16 +1,19 @@
-name: .NET Build
+﻿name: .NET Build
+
 on: [push]
 
 jobs:
   build:
-    name: Build
+
     runs-on: windows-latest
+
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Setup
-        uses: actions/setup-dotnet@v1
-      - name: Build
-        run: dotnet build --configuration Release
-      - name: Test
-        run: dotnet test
+    - uses: actions/checkout@v5
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v5
+
+    - name: Build
+      run: dotnet build -c release
+
+    - name: Pack
+      run: dotnet pack ./src/DotNetCampus.WeChatWork -c release --no-build
