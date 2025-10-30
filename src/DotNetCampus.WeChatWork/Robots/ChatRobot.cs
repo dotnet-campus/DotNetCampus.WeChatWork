@@ -99,7 +99,7 @@ public sealed class ChatRobot
     });
 
     /// <summary>
-    /// 发送任意格式的企业微信消息。如果你希望发送的消息超出本机器人提供的范围（例如企业微信更新但此库没有更新），则使用此方法发送任意格式的消息。
+    /// 发送通用格式的企业微信消息。
     /// </summary>
     /// <param name="message">要发送的消息体。</param>
     /// <returns>发送消息后的服务器响应。</returns>

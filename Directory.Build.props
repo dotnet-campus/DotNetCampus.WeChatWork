@@ -24,6 +24,7 @@
   <!-- 自定义属性 -->
   <PropertyGroup>
     <RepositoryRoot>$(MSBuildThisFileDirectory)</RepositoryRoot>
+    <ThisYear>$([System.DateTime]::Now.ToString(`yyyy`))</ThisYear>
   </PropertyGroup>
 
   <!-- 产品和项目信息 -->
@@ -34,6 +35,7 @@
     <RepositoryUrl>https://github.com/dotnet-campus/DotNetCampus.WeChatWork.git</RepositoryUrl>
     <Product>企业微信机器人开发 API</Product>
     <Company>dotnet-campus</Company>
+    <Copyright>Copyright © dotnet-campus 2020-$(ThisYear)</Copyright>
   </PropertyGroup>
 
 </Project>
